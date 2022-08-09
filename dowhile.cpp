@@ -27,11 +27,11 @@ int totaldamage(int characterhealth,int damage)
 
 
 int main(){
-    do{ 
-        int characterhealth{}, damage{};
+do{ 
+  int characterhealth{}, damage{};
         
-    characterhealth = getInputHealth();
-    damage = playerdamage();
+  characterhealth = getInputHealth();
+  damage = playerdamage();
   int charactergotHit=  totaldamage(characterhealth,damage);
   cout << charactergotHit;
   cout<<endl<<"Enter any \'Y\' or \'y\' to loop: ";

@@ -8,17 +8,32 @@ struct PlayerStats{
     int level;
     int mana;
     int xp;
-}Player;
+};
 struct AiStats{
     int health;
     int level;
-    Vector2D location;//Creating instance of Vector2D
-}rat{10,20,{5}},alien{20,30};
+    Vector2D location;//Creating Object
+void setLocation(float p, float q)
+    {
+        location.x = p;
+        location.y = q;
+    }
+Vector2D getLocation(){ //Returing location to Vector2D
+        return location;
+    }
+    
+}rat{20,30},alien{50,30};//;//Creating instance //member
 int main()
 {
     cout<<rat.health<<endl;
-    cout<<alien.health;
+    cout<<alien.health<<endl;
     cout<<rat.level<<endl;
     cout<<alien.level<<endl;
     cout<<rat.location.x<<endl;
-    }
+    AiStats Player1;
+    Player1.setLocation(5,6);
+    Vector2D vector = Player1.getLocation();
+    cout<<vector.y;
+    cout<<Player1.location.x;
+    cout<<Player1.getLocation().x;
+}
