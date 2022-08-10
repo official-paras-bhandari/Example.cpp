@@ -11,7 +11,7 @@ struct PlayerStats{
 };
 struct AiStats{
     int health;
-    int level;
+    int level;//member
     Vector2D location;//Creating Object
 void setLocation(float p, float q)
     {
@@ -22,7 +22,7 @@ Vector2D getLocation(){ //Returing location to Vector2D
         return location;
     }
     
-}rat{20,30},alien{50,30};//;//Creating instance //member
+}rat{20,30},alien{50,30};//;//Creating instance 
 int main()
 {
     cout<<rat.health<<endl;
