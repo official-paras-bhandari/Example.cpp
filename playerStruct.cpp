@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 struct Vector2D{
-    int x,y;
+    int x,y,z;
 };
 struct PlayerStats{
     int health;
@@ -13,10 +13,11 @@ struct AiStats{
     int health;
     int level;//member
     Vector2D location;//Creating Object
-void setLocation(float p, float q)
+void setLocation(float p, float q,float r)
     {
         location.x = p;
         location.y = q;
+        location.z = r;
     }
 Vector2D getLocation(){ //Returing location to Vector2D
         return location;
@@ -25,15 +26,7 @@ Vector2D getLocation(){ //Returing location to Vector2D
 }rat{20,30},alien{50,30};//;//Creating instance 
 int main()
 {
-    cout<<rat.health<<endl;
-    cout<<alien.health<<endl;
-    cout<<rat.level<<endl;
-    cout<<alien.level<<endl;
-    cout<<rat.location.x<<endl;
-    AiStats Player1;
-    Player1.setLocation(5,6);
-    Vector2D vector = Player1.getLocation();
-    cout<<vector.y;
-    cout<<Player1.location.x;
-    cout<<Player1.getLocation().x;
+   AiStats ai1 , ai2;//creating Object 
+   AiStats aistas[]{ai1,ai2};//maming Object and having Arrays size
+   cout<<aistas[1].getLocation().x;
 }
