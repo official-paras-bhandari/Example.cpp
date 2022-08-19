@@ -6,8 +6,8 @@ int main()
     int arraysize{};
     cout << "Enter the amount of score should be added :";
     cin >> arraysize;
-int *ptr = new int[arraysize];
-cout<<"Enter the "<<arraysize <<"Scores";
+    int *ptr = new int[arraysize];
+    cout<<"Enter the "<<arraysize <<"Scores";
     for (int i = 0; i < arraysize;i++)
     {
         cin >> ptr[i];
