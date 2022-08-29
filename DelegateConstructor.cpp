@@ -3,36 +3,33 @@ using namespace std;
 
 struct GameStates{
     GameStates();
-    GameStates &GSetCurrentRoom(int m_room);
-    GameStates &GSetCurrentLevel(int m_level);
-    void String();
+    GameStates(int m_levelp,int m_roomp);
+    void setCurrentLevel (int m_levelp);
+    int GetCurrentLevel();
     private:
     int m_level;
     int m_room;   
 };
 GameStates::GameStates()
-:m_room(1),m_level(1)//Assiging Vlaue to room and level;
+:GameStates(3,4)//Assiging Vlaue to room and level;
 {
-    cout << "Constructor is Invoked";
+    cout << "Constructor is Invoked"<<endl;
 }
-GameStates & GameStates::GSetCurrentRoom(int room)
+GameStates::GameStates(int m_levelp ,int m_roomp)
+:m_level(m_levelp),m_room(m_roomp)
 {
-    m_room = room;
-    return *this;//returning derefercning to GameStates object(that is entity1);
+   cout<<"Overload Constructor is invoked"<<endl; 
 }
-GameStates & GameStates::GSetCurrentLevel(int level)
-{
-    m_level = level;
-    return *this;
+void GameStates::setCurrentLevel(int m_levelp){
+    m_level = m_levelp;
 }
-void GameStates::String(){
-    cout << " current room: "<<m_room<<endl;
-    cout << " current level: "<<m_level<<endl;
+
+int GameStates::GetCurrentLevel(){
+   return m_level;
 }
 int main(){
-    GameStates entity1;
-    entity1.String();
-    entity1.GSetCurrentRoom(5);
-    entity1.GSetCurrentLevel(6);
-    entity1.String();
+    GameStates entity1 ,entity2(6,8);//Calling Constructor
+    entity1.GetCurrentLevel();
+    entity2.GetCurrentLevel();
+    return 0;
 }
