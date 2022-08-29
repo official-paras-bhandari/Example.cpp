@@ -14,7 +14,7 @@ struct Entity{
     }
 };
 int main(){
-    Entity entity1 ,entity2;
+    Entity entity1 ,entity2;//entity1 is Default Constructor//entity2 is Overload Constructor
     entity1.campare(entity2);
     return 0;
 }
