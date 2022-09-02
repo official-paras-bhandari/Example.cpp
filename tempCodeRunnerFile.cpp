@@ -1,1 +1,1 @@
-GameStates
+  cout<< entity
